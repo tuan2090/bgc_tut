@@ -103,7 +103,7 @@ int main(void){
   char *t = "Goodbye";
 
   printf("the length of string '%s' is %d\n", s, my_strlen(s));
-  printf("the length of string '%s' is%d\n", t, my_strlen(t));
+  printf("the length of string '%s' is %d\n", t, my_strlen(t));
 
   // void pointer
   char buff[1024];
