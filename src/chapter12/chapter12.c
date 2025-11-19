@@ -110,7 +110,7 @@ int main(void){
   free(p2);
 
   // reading in line of arbitrary length
-  FILE *fp = fopen("./output.txt", "r");
+  FILE *fp = fopen("./test.txt", "r");
   char *line;
 
   while ((line = readline(fp)) != NULL) {
