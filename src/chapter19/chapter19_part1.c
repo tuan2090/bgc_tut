@@ -20,6 +20,17 @@
 // macros with variable arguments - macros
 #define X(a, b, ...) (10*(a) + 100*(b)), __VA_ARGS__
 
+// "stringify" __VA_ARGS__
+#define Y(...) #__VA_ARGS__
+
+// stringification - macros
+#define STR(x) #x
+
+#define PRINTLN(t) printf("%s\n", #t)
+
+// concatenation - macros
+#define CONCAT(a, b) a ## b
+
 int main(void){
   // simple macros
   printf("%s %s!\n", HELLO, NAME);
@@ -83,10 +94,20 @@ int main(void){
 
   // macros with multify argument
   int vw = 6, vh = 4;
-  printf("Area of triangle with w=%d, h=%d is %f\n", vw, vh, TRIANGLE_AREA(vw, vh));
+  printf("Area of triangle with w=%d, h=%d is %.1f\n", vw, vh, TRIANGLE_AREA(vw, vh));
 
   // macros with variable arguments
-  printf("%d, %f, %s, %d\n", X(5, 3, 5.5, "hi", 55));
+  printf("%d, %.1f, %s, %d\n", X(5, 3, 5.5, "hi", 55));
+  
+  printf("%s\n", Y("Hello, World!"));
+
+  // stringification
+  printf("%s\n", STR("This is my string"));
+
+  PRINTLN("Goodbye, World!");
+
+  // concatenation
+  printf("%f\n", CONCAT(3.14, 1592));
 
   return 0;
 }
