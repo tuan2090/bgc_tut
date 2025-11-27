@@ -1,5 +1,5 @@
 # Repo info
-## !!! The project is no longer maintainer !!!
+## ‼️ The project is no longer mantainer ‼️
 The code in this repo is referenced from the Beej's Guide to C Programming book.
 
 # Book info
